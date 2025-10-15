@@ -1,8 +1,4 @@
-Of course. Here is a complete `README.md` file tailored for the version of your project that uses LM Studio and flat file storage.
-
------
-
-# Smart Task Planner (Local LLM Version) 🚀
+# Smart Task Planner
 
 The Smart Task Planner is a web application that uses a locally-hosted Large Language Model (LLM) via **LM Studio** to break down a high-level goal into a detailed, actionable project plan. Simply provide a goal in natural language (e.g., "Launch a new website in 3 weeks"), and the AI will generate a structured plan complete with phases, tasks, dependencies, and timelines, all running on your own machine.
 
@@ -10,7 +6,7 @@ This version is designed to run completely offline, ensuring privacy and zero AP
 
 -----
 
-## \#\# Features
+## Features
 
   * **100% Local & Private**: All AI processing is done on your machine using LM Studio. No data is sent to external cloud services.
   * **Natural Language Input**: Understands goals and timelines written in plain English.
@@ -21,7 +17,7 @@ This version is designed to run completely offline, ensuring privacy and zero AP
 
 -----
 
-## \#\# Tech Stack
+## Tech Stack
 
   * **Backend**: Python, Flask
   * **AI Model Server**: [LM Studio](https://lmstudio.ai/) (running any GGUF-compatible model)
@@ -31,23 +27,23 @@ This version is designed to run completely offline, ensuring privacy and zero AP
 
 -----
 
-## \#\# Setup and Installation
+## Setup and Installation
 
 Follow these steps to get the project running on your local machine.
 
-### \#\#\# 1. Prerequisites
+### 1. Prerequisites
 
   * Python 3.8+
   * [LM Studio](https://lmstudio.ai/) installed on your machine.
 
-### \#\#\# 2. Clone the Repository
+### 2. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/smart-task-planner.git
 cd smart-task-planner
 ```
 
-### \#\#\# 3. Set Up a Virtual Environment
+### 3. Set Up a Virtual Environment
 
 It's highly recommended to use a virtual environment.
 
@@ -62,7 +58,7 @@ It's highly recommended to use a virtual environment.
     source venv/bin/activate
     ```
 
-### \#\#\# 4. Install Dependencies
+### 4. Install Dependencies
 
 Create a `requirements.txt` file with the following content:
 
@@ -78,12 +74,12 @@ Then, install the packages from the file:
 pip install -r requirements.txt
 ```
 
-### \#\#\# 5. Configure LM Studio
+### 5. Configure LM Studio
 
 1.  **Download a Model**: Open LM Studio. In the search tab (🔍), download a model suitable for JSON generation and instruction-following. Good options include models from `Meta Llama 3`, `Mistral`, or `Phi-3`.
 2.  **Start the Server**: Go to the local server tab (↔️). Select the model you downloaded and click **Start Server**. This will expose an API endpoint at `http://localhost:1234/v1`.
 
-### \#\#\# 6. Prepare the Project
+### 6. Prepare the Project
 
 1.  **Create Storage Directory**: In your project folder, create a directory to store the generated plans.
     ```bash
@@ -91,7 +87,7 @@ pip install -r requirements.txt
     ```
 2.  **Environment File**: Create a `.env` file. It can be empty, as no API keys are needed for this local setup.
 
-### \#\#\# 7. Run the Application
+### 7. Run the Application
 
 Now, you can start the Flask server.
 
@@ -103,11 +99,11 @@ The application will be running at `http://127.0.0.1:5000`. Open this URL in you
 
 -----
 
-## \#\# API Usage
+## API Usage
 
 You can also interact directly with the API.
 
-### \#\#\# Generate a New Plan
+### Generate a New Plan
 
   * **Endpoint**: `POST /api/plan`
   * **Description**: Takes a natural language query and returns a structured project plan.
@@ -122,14 +118,14 @@ You can also interact directly with the API.
     curl -X POST -H "Content-Type: application/json" -d '{"query": "Organize a community tech meetup in 2 months"}' http://127.0.0.1:5000/api/plan
     ```
 
-### \#\#\# Retrieve All Saved Plans
+### Retrieve All Saved Plans
 
   * **Endpoint**: `GET /api/plans`
   * **Description**: Retrieves a list of all previously generated plans from the `saved_plans` directory.
 
 -----
 
-## \#\# Project Structure
+## Project Structure
 
 ```
 .
