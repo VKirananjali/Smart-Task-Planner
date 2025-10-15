@@ -39,7 +39,7 @@ Follow these steps to get the project running on your local machine.
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/smart-task-planner.git
+git clone https://github.com/VKirananjali/smart-task-planner.git
 cd smart-task-planner
 ```
 
